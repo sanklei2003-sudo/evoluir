@@ -1,8 +1,25 @@
 # Evoluir
 
-App pessoal de desenvolvimento — habilidades, padrões e decisões. Simples, visual, e 100% local: nenhum dado sai do seu computador.
+App pessoal de desenvolvimento — habilidades, padrões e decisões. Simples, visual, e 100% local: nenhum dado sai do seu navegador.
 
-## Como rodar
+**App publicado:** https://sanklei2003-sudo.github.io/evoluir/
+
+No iPhone: abra o link no **Safari** → compartilhar → "Adicionar à Tela de Início", para ganhar um ícone próprio e abertura em tela cheia.
+
+Celular e computador têm dados **separados** (cada navegador guarda o seu, localmente).
+
+## Publicar uma atualização
+
+Depois de mexer no código:
+
+```bash
+npm run build
+npx gh-pages -d dist
+```
+
+Isso sobe o novo build para o link público acima (branch `gh-pages`). O `git push` normal (branch `main`) só versiona o código-fonte — não atualiza o site sozinho.
+
+## Rodar localmente (opcional, para desenvolver)
 
 ```bash
 npm install
@@ -30,11 +47,3 @@ copy(JSON.stringify({
 ```
 
 Isso copia um backup para a área de transferência — cole num arquivo de texto para guardar.
-
-## Build para produção
-
-```bash
-npm run build
-```
-
-Gera os arquivos estáticos em `dist/`, que podem ser abertos localmente ou hospedados em qualquer servidor de arquivos estáticos, se um dia quiser acessar de outro lugar.
